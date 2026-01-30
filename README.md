@@ -72,6 +72,20 @@ docker compose up --build
 - 前端访问：`http://localhost:8080`
 - 后端健康检查：`http://localhost:8000/api/health`
 
+## Railpack 部署（前后端一体）
+
+Railpack 需要识别启动脚本，因此仓库根目录已提供 `start.sh`：
+
+```bash
+./start.sh
+```
+
+该脚本会：
+1. 安装后端依赖并启动 FastAPI。
+2. 构建前端静态资源，并由后端挂载提供。
+
+部署后访问根路径即可看到前端页面，API 仍在 `/api` 路径下。
+
 ## 注意事项
 
 - 当前版本使用内存假实现（未连接数据库），仅用于演示。
