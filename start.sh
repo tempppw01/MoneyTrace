@@ -27,4 +27,5 @@ cd ..
 echo "[start] 启动后端"
 export FRONTEND_DIST="$(pwd)/frontend/dist"
 PORT_VALUE=${PORT:-8080}
-uvicorn backend.app.main:app --host 0.0.0.0 --port "$PORT_VALUE"
+cd backend
+uvicorn app.main:app --host 0.0.0.0 --port "$PORT_VALUE"
