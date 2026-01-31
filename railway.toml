@@ -1,5 +1,6 @@
 [build]
 builder = "nixpacks"
+nixpacksPlan = { providers = ["python", "node"] }
 
 [deploy]
 startCommand = "bash start.sh"
